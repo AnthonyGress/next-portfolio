@@ -10,6 +10,7 @@ import { Chip, Divider } from '@nextui-org/react';
 import Link from 'next/link';
 import './lightbox.css';
 import { MdArrowOutward } from 'react-icons/md';
+import dynamic from 'next/dynamic';
 
 type Props = {
     lightbox?: boolean;
@@ -42,7 +43,9 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                 rowHeight={rowHeight ? rowHeight : 300}
             /> */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                {images.map((image: any, i: number) =>{
+                {images.map((image: any, i: number) => {
+                    dynamic(() => import(image.src), { ssr: false });
+
                     return navigate ? <Link key={Math.random()} href={image.href}>
                         <div className='z-30 relative flex justify-center items-center h-full'>
                             <div className="absolute inset-0 z-10 bg-neutral-950/[.45] text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300 hover:animate-fade" >
@@ -56,13 +59,14 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                                 </Chip>
                             </div>
                             <div>
-                                <Image alt='test'className='rounded-lg' height={0} src={image.src} width={1000} />
+                                <Image alt='test'blurDataURL={image.src} className='rounded-lg' height={0} placeholder="blur" quality={75} src={image.src} width={1000}/>
                             </div>
                         </div>
                     </Link>
                         :
                         <div key={Math.random()} className='z-30 relative hover:cursor-pointer flex items-center '>
-                            <Image alt='test'className='rounded-lg' height={500} src={image.src} width={1500} onClick={() => handleClick(i, image)}/>
+                            <Image alt='test' blurDataURL={image.src} className='rounded-lg' height={500} placeholder="blur" quality={75} src={image.src}
+                                width={1500} onClick={() => handleClick(i, image)}/>
                         </div>;
                 }
                 )}
