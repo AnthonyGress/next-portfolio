@@ -20,6 +20,8 @@ export default function Contact() {
         return false;
     };
 
+    const resetFormValues = () => setFormValues({ name: '', email: '', message: '' });
+
     const sendEmail = async (e: any) => {
         e.preventDefault();
         const formData = new FormData(formRef.current).entries();
@@ -33,6 +35,7 @@ export default function Contact() {
             if (res?.status === StatusCodes.OK) {
                 PopupManager.success('We will be in contact with you shortly');
                 e.target.reset();
+                resetFormValues();
             } else {
                 console.log('failed', res?.data);
                 console.log('status', res?.status);
