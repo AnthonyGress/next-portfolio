@@ -13,7 +13,7 @@ export default function Home() {
             <Image priority alt='test' className='fixed sm:left-[45%] z-0 scale-[4] sm:scale-[1.25]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
             <Image priority alt='test' className='fixed sm:hidden bottom-0 -left-56 scale-[3]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
             <Image priority alt='test' className='fixed hidden md:block top-0 -left-64 scale-[1.25]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
-            <Image alt='catalyx logo' className='animate-spin-slow mb-12' height='140' src='/logo.png' width='140'/>
+            <Image alt='catalyx logo' className='animate-spin-slow mb-4 md:mb-12' height='140' src='/logo.png' width='140'/>
             <div className="inline-block bg-transparent">
                 <h1 className={`${title({ color: 'violet' })} mb-5`}>Anthony&nbsp;</h1>
                 <h1 className={`${title()} mb-5`}>Gress</h1>
@@ -22,7 +22,7 @@ export default function Home() {
                 <h1 className={title({ size: 'sm' })}>Engineering the&nbsp;</h1>
                 <h1 className={title({ color: 'violet', size: 'sm' })}>Future&nbsp;</h1>
                 <br />
-                <h2 className={'mt-20 mb-20 text-2xl' }>
+                <h2 className={'mt-20 mb-4 md:mb-20 text-2xl' }>
                 Strategic Software Solutions for Modern Businesses
                 </h2>
             </div>
