@@ -10,7 +10,6 @@ import { Chip, Divider } from '@nextui-org/react';
 import Link from 'next/link';
 import './lightbox.css';
 import { MdArrowOutward } from 'react-icons/md';
-import dynamic from 'next/dynamic';
 
 type Props = {
     lightbox?: boolean;
