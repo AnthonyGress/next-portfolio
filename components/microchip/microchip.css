@@ -1,0 +1,96 @@
+.microchip {
+    -webkit-user-select: none;
+    user-select: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 180px;
+    padding: 20px 25px;
+    height: 70px;
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: var(--letter-spacing-2);
+    font-weight: 700;
+    color: #fff;
+    position:inherit;
+    background: linear-gradient(92deg, #232323, #222), linear-gradient(180deg, hsla(0, 0%, 100%, .05), hsla(0, 0%, 0%, .05) 26.56%, rgba(0, 0, 0, .5) 51.56%, rgba(0, 0, 0, .05));
+    border-top: 3px solid #2F2E2F;
+    border-left: 3px solid #2F2E2F;
+    border-right: 3px solid #2F2E2F;
+    border-bottom: 3px solid #1B1B1A;
+    border-width: 3px;
+    border-style: solid;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,.1),0 6px 4px -2px rgba(0,0,0,.15),inset 0 -3px 1px -1px rgba(0,0,0,.25); */
+}
+
+.microchip-shine {
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 8px;
+    width: 180px;
+    padding: 20px 25px;
+    height: 70px;
+    border-radius: 8px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.microchip-shine:before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .3),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 5s infinite linear;
+}
+
+.data-connector {
+    background: linear-gradient(1turn,#6f6f6f,#878787 33.33%,#8b8b8b 66.67%,#4d4d4d);
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,.05),inset -1px 0 1px 1px rgba(0,0,0,.1),inset 0 .2px 1px .1px #ddd;
+    border-radius: 1.5px 1.5px 0 0;
+    width: 6px;
+    height: 10px;
+}
+
+.data-connectors-left {
+    left: calc(10px * -1);
+    bottom: 15px;
+    position: absolute;
+}
+.data-connectors-right {
+    right: calc(10px * -1);
+    bottom: 15px;
+    position: absolute;
+}
+.data-connectors-top {
+    right: calc(10px * 1.9);
+    bottom: 66px;
+    position: absolute;
+}
+.data-connectors-bottom {
+    right: calc(10px * 1.9);
+    top: 66px;
+    position: absolute;
+}
+
+.microchip-text {
+    background: linear-gradient(92.66deg,#919191,#eaeaea 19.79%,#828181 33.33%,#c6c6c6 70.31%,#606060);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* animation: shine 4s ease-in-out infinite alternate-reverse; */
+    background-clip: text;
+    background-size: 200% auto;
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}

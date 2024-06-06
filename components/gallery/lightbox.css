@@ -1,0 +1,13 @@
+.yarl__toolbar > .yarl__button {
+    transform: scale(1.5) !important;
+  }
+
+  .yarl__button.yarl__navigation_prev {
+    transform: scale(3) !important;
+    margin-left: 1%;
+  }
+
+  .yarl__button.yarl__navigation_next {
+    transform: scale(3) !important;
+    margin-right: 1%;
+  }
