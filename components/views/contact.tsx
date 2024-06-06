@@ -67,10 +67,6 @@ export default function Contact() {
         const body = JSON.stringify(Object.fromEntries(formData));
         const isValid = validateForm();
 
-
-        console.log(body);
-        console.log('isValid', isValid);
-
         if (isValid) {
             try {
                 const res = await axios.post('/api/contact', body);
