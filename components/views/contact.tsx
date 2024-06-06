@@ -1,6 +1,6 @@
 'use client';
 import { Card, CardBody, Button, Textarea, Input } from '@nextui-org/react';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 
@@ -10,44 +10,88 @@ import { title } from '@/components/primitives';
 
 export default function Contact() {
     const [formValues, setFormValues] = useState({ name: '', email: '', message: '' });
+    const [invalidName, setInvalidName] = useState(false);
+    const [invalidEmail, setInvalidEmail] = useState(false);
+    const [invalidMessage, setInvalidMessage] = useState(false);
+    const [loading, setLoading] = useState(false);
     const formRef = useRef<any>(null);
 
     const disableBtn = () => {
-        if (!formValues.name || !formValues.email || !formValues.message) {
+        if (loading || !formValues.name || !formValues.email || !formValues.message) {
             return true;
         }
 
         return false;
     };
 
+    const isValidEmail = (email: string): boolean => {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        return emailPattern.test(email);
+    };
+
+    const validateForm = () => {
+        if (!formValues.name) {
+            setInvalidName(true);
+
+            return false;
+        } else {
+            setInvalidName(false);
+        }
+
+        if (!formValues.message) {
+            setInvalidMessage(true);
+
+            return false;
+        } else {
+            setInvalidMessage(false);
+        }
+
+        if (!isValidEmail(formValues.email)) {
+            setInvalidEmail(true);
+
+            return false;
+        } else {
+            setInvalidEmail(false);
+        }
+
+        return true;
+
+    };
+
     const resetFormValues = () => setFormValues({ name: '', email: '', message: '' });
 
-    const sendEmail = async (e: any) => {
-        e.preventDefault();
+    const sendEmail = async () => {
+        setLoading(true);
         const formData = new FormData(formRef.current).entries();
         const body = JSON.stringify(Object.fromEntries(formData));
+        const isValid = validateForm();
+
 
         console.log(body);
+        console.log('isValid', isValid);
 
-        try {
-            const res = await axios.post('/api/contact', body);
+        if (isValid) {
+            try {
+                const res = await axios.post('/api/contact', body);
 
-            if (res?.status === StatusCodes.OK) {
-                PopupManager.success('We will be in contact with you shortly');
-                e.target.reset();
-                resetFormValues();
-            } else {
-                console.log('failed', res?.data);
-                console.log('status', res?.status);
+                if (res?.status === StatusCodes.OK) {
+                    PopupManager.success('We will be in contact with you shortly');
+                    resetFormValues();
+                } else {
+                    console.log('failed', res?.data);
+                    console.log('status', res?.status);
+                    PopupManager.failure('Something Went Wrong');
+                }
+
+            } catch (error) {
+                console.error('failed', error);
                 PopupManager.failure('Something Went Wrong');
             }
 
-        } catch (error) {
-            console.error('failed', error);
-            PopupManager.failure('Something Went Wrong');
+            console.log('done');
         }
-
-        console.log('done');
+        setLoading(false);
     };
 
     return (
@@ -70,9 +114,12 @@ export default function Contact() {
                         >
                             <Input isRequired
                                 className="max-w-xs self-center"
+                                errorMessage='Name is required'
+                                isInvalid={invalidName}
                                 label="Name"
                                 labelPlacement="inside"
                                 name='name'
+                                value={formValues.name}
                                 onChange={(e) => setFormValues((prevState: any) => {
                                     let newObj = Object.assign({}, prevState);
 
@@ -84,10 +131,13 @@ export default function Contact() {
                             />
                             <Input isRequired
                                 className="max-w-xs self-center"
+                                errorMessage='Must be a valid email'
+                                isInvalid={invalidEmail}
                                 label="Email"
                                 labelPlacement='inside'
                                 name='email'
                                 type='email'
+                                value={formValues.email}
                                 onChange={(e) => setFormValues((prevState: any) => {
                                     let newObj = Object.assign({}, prevState);
 
@@ -99,9 +149,12 @@ export default function Contact() {
                             />
                             <Textarea isRequired
                                 className="max-w-xs self-center"
+                                errorMessage='Message is required'
+                                isInvalid={invalidMessage}
                                 label="Message"
                                 labelPlacement="inside"
                                 name='message'
+                                value={formValues.message}
                                 onChange={(e) => setFormValues((prevState: any) => {
                                     let newObj = Object.assign({}, prevState);
 
@@ -111,8 +164,8 @@ export default function Contact() {
                                 }
                                 )}
                             />
-                            <div className='w-full flex justify-center'><Button className='text-white mt-4 w-9/12 sm:w-1/2 mb-8' color='primary' isDisabled={disableBtn()} size='lg' type='submit'>Send</Button></div>
                         </form>
+                        <div className='w-full flex justify-center'><Button className='text-white mt-4 w-9/12 sm:w-1/2 mb-8' color='primary' isDisabled={disableBtn()} size='lg' onClick={sendEmail}>Send</Button></div>
                     </div>
                 </Card>
             </div>
