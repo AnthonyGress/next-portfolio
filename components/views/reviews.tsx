@@ -4,7 +4,7 @@ import { title } from '@/components/primitives';
 
 export default function Reviews() {
     return (
-        <section className="py-5 my-16" data-aos="fade-up" id='reviews'>
+        <section className="my-16" data-aos="fade-up" id='reviews'>
             <div className='flex justify-center flex-col w-full gap-2 items-center mb-16'>
                 <h1 className={title()}>Testimonials</h1>
                 <h2 className={'text-default-500 text-xl'}>What People Are Saying</h2>
