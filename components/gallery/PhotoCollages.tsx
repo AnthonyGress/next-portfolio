@@ -21,7 +21,7 @@ type Props = {
 
 export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHeight }: Props) => {
     const [index, setIndex] = useState(-1);
-    const [max, setMax] = useState(6);
+    const [max, setMax] = useState(9);
     const [buttonText, setButtonText] = useState('More');
 
     const toggleShow = () => {
@@ -82,7 +82,7 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                 }
                 )}
             </div>
-            {navigate && <div className="flex justify-center mt-8">
+            {/* {navigate && <div className="flex justify-center mt-8">
                 <Button
                     className={`${buttonStyles({
                         color: 'primary',
@@ -94,7 +94,7 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                 >
                     {`Show ${buttonText}`}
                 </Button>
-            </div>}
+            </div>} */}
             {lightbox && <Lightbox
                 close={() => setIndex(-1)}
                 index={index}
