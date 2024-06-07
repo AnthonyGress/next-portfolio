@@ -22,7 +22,7 @@ export default function Home() {
                 <h1 className={title({ size: 'sm' })}>Engineering the&nbsp;</h1>
                 <h1 className={title({ color: 'violet', size: 'sm' })}>Future&nbsp;</h1>
                 <br />
-                <h2 className={'mt-20 mb-4 md:mb-20 text-2xl' }>
+                <h2 className={'mt-12 mb-12 md:mt-20 md:mb-20 text-2xl' }>
                 Strategic Software Solutions for Modern Businesses
                 </h2>
             </div>
