@@ -6,6 +6,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+section {
+    overflow:hidden;
+}
+
 input, select:focus, textarea {
     font-size: 16px !important;
 }
