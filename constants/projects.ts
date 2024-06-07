@@ -73,7 +73,7 @@ export const projects = [
         github: 'https://github.com/AnthonyGress/Android-Toolkit'
     },
     {
-        title: 'Color ID',
+        title: 'Color ID iOS App',
         description: 'Color ID is a versatile app designed for anyone who is color blind or needs precise color identification. Users can take photos or select images from their camera roll to identify specific colors within the image. The app provides detailed color information, including RGB, CMYK, and HSL values, making it an invaluable tool for designers, artists, and anyone working with colors. Additionally, Color ID allows users to create and save custom color palettes, ensuring that favorite or frequently used colors are always at hand.',
         href: '/portfolio/color-id',
         images: [
