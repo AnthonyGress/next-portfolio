@@ -23,9 +23,6 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
     const [index, setIndex] = useState(-1);
     const [max, setMax] = useState(6);
     const [buttonText, setButtonText] = useState('More');
-    const router = useRouter();
-
-
 
     const toggleShow = () => {
         if (buttonText === 'More') {
@@ -39,7 +36,6 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
     };
 
     const handleClick = (index: number, item: any) => {
-        console.log(item);
         setIndex(index);
     };
 
@@ -48,9 +44,6 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
         width,
         height
     }));
-
-    console.log(images);
-
 
     return (
         <>
