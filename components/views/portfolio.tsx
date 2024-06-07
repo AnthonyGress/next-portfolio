@@ -1,5 +1,5 @@
-import { Chip } from '@nextui-org/react';
-import Link from 'next/link';
+import { Button, Chip } from '@nextui-org/react';
+import { button as buttonStyles } from '@nextui-org/theme';
 
 import { projects } from '../../constants/projects';
 import { PhotoCollage } from '../gallery/PhotoCollages';

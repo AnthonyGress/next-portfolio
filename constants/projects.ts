@@ -49,17 +49,6 @@ export const projects = [
         website: 'https://stargateapp.onrender.com/'
 
     },
-
-    // {
-    //     title: 'Youtube Downloader',
-    //     description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
-    //     href: '/portfolio/youtube-downloader',
-    //     images: [
-    //         '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
-    //     ],
-    //     cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
-    //     github: 'https://github.com/AnthonyGress/Youtube-Downloader'
-    // },
     {
         title: 'Wild Haven Somatics',
         description: 'Wild Haven Somatics is a wellness company dedicated to promoting holistic health through a variety of services. They offer yoga classes, personalized yoga therapy, and online classes and workshops, catering to individuals seeking physical, mental, and emotional well-being. With a focus on somatic practices, Wild Haven Somatics helps clients connect with their bodies, reduce stress, and enhance overall vitality. Whether in-person or online, their expert instructors provide supportive and transformative experiences designed to meet the unique needs of each participant.',
@@ -98,4 +87,14 @@ export const projects = [
         cover: '/images/portfolio/color-id/color-id-cover.jpg',
         website: 'https://apple.co/4bFvK5G'
     },
+    {
+        title: 'Youtube Downloader',
+        description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
+        href: '/portfolio/youtube-downloader',
+        images: [
+            '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+        ],
+        cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+        github: 'https://github.com/AnthonyGress/Youtube-Downloader'
+    }
 ];
