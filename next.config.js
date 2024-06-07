@@ -6,6 +6,16 @@ const nextConfig = {
     // trailingSlash: false,
     // staticPageGenerationTimeout: 1000,
     // reactStrictMode: false
+
+    async redirects() {
+        return [
+          {
+            source: '/color-id',
+            destination: '/portfolio/color-id',
+            permanent: true,
+          },
+        ]
+      },
 }
 
 module.exports = nextConfig
