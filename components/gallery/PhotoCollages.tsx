@@ -89,7 +89,7 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                 }
                 )}
             </div>
-            <div className="flex justify-center mt-8">
+            {navigate && <div className="flex justify-center mt-8">
                 <Button
                     className={`${buttonStyles({
                         color: 'primary',
@@ -101,7 +101,7 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                 >
                     {`Show ${buttonText}`}
                 </Button>
-            </div>
+            </div>}
             {lightbox && <Lightbox
                 close={() => setIndex(-1)}
                 index={index}
