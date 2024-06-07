@@ -49,16 +49,17 @@ export const projects = [
         website: 'https://stargateapp.onrender.com/'
 
     },
-    {
-        title: 'Youtube Downloader',
-        description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
-        href: '/portfolio/youtube-downloader',
-        images: [
-            '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
-        ],
-        cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
-        github: 'https://github.com/AnthonyGress/Youtube-Downloader'
-    },
+
+    // {
+    //     title: 'Youtube Downloader',
+    //     description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
+    //     href: '/portfolio/youtube-downloader',
+    //     images: [
+    //         '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+    //     ],
+    //     cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+    //     github: 'https://github.com/AnthonyGress/Youtube-Downloader'
+    // },
     {
         title: 'Wild Haven Somatics',
         description: 'Wild Haven Somatics is a wellness company dedicated to promoting holistic health through a variety of services. They offer yoga classes, personalized yoga therapy, and online classes and workshops, catering to individuals seeking physical, mental, and emotional well-being. With a focus on somatic practices, Wild Haven Somatics helps clients connect with their bodies, reduce stress, and enhance overall vitality. Whether in-person or online, their expert instructors provide supportive and transformative experiences designed to meet the unique needs of each participant.',
@@ -81,5 +82,20 @@ export const projects = [
         ],
         cover: '/images/portfolio/android-toolkit/android-toolkit-1.jpg',
         github: 'https://github.com/AnthonyGress/Android-Toolkit'
-    }
+    },
+    {
+        title: 'Color ID',
+        description: 'Color ID is a versatile app designed for anyone who is color blind or needs precise color identification. Users can take photos or select images from their camera roll to identify specific colors within the image. The app provides detailed color information, including RGB, CMYK, and HSL values, making it an invaluable tool for designers, artists, and anyone working with colors. Additionally, Color ID allows users to create and save custom color palettes, ensuring that favorite or frequently used colors are always at hand.',
+        href: '/portfolio/color-id',
+        images: [
+            '/images/portfolio/color-id/color-id-1.jpg',
+            '/images/portfolio/color-id/color-id-2.jpg',
+            '/images/portfolio/color-id/color-id-3.jpg',
+            '/images/portfolio/color-id/color-id-4.jpg',
+            '/images/portfolio/color-id/color-id-5.jpg',
+            '/images/portfolio/color-id/color-id-6.jpg',
+        ],
+        cover: '/images/portfolio/color-id/color-id-cover.jpg',
+        website: 'https://apple.co/4bFvK5G'
+    },
 ];

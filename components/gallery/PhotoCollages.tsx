@@ -56,14 +56,14 @@ export const PhotoCollage = ({ lightbox = false, navigate = false, images, rowHe
                                 </Chip>
                             </div>
                             <div>
-                                <Image alt='test'blurDataURL={image.src} className='rounded-lg' height={0} placeholder="blur" quality={75} src={image.src} width={1000}/>
+                                <Image alt='cover image' blurDataURL={image.src} className='rounded-lg' height={0} placeholder="blur" quality={75} src={image.src} width={1000}/>
                             </div>
                         </div>
                     </Link>
                         :
                         <div key={Math.random()} className='z-30 relative hover:cursor-pointer flex items-center '>
-                            <Image alt='test' blurDataURL={image.src} className='rounded-lg' height={500} placeholder="blur" quality={75} src={image.src}
-                                width={1500} onClick={() => handleClick(i, image)}/>
+                            <Image alt='portfolio image' blurDataURL={image.src} className='rounded-lg' height={500} placeholder="blur" quality={75} src={image.src}
+                                width={image.src.includes('color') ? 300 : 1500} onClick={() => handleClick(i, image)}/>
                         </div>;
                 }
                 )}
