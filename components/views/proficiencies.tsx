@@ -4,11 +4,11 @@ import { subtitle, title } from '@/components/primitives';
 
 export const Proficiencies = () => {
     return (
-        <section className='mb-16'>
+        <section className='mb-16' data-aos="fade-up">
             <div className='flex justify-center flex-col w-full gap-2 items-center mt-16 mb-16'>
                 <h1 className={title()}>Proficiencies</h1>
             </div>
-            <Card isBlurred className="border-none bg-background/60 dark:bg-default-100/50  py-4" shadow="sm">
+            <Card isBlurred className="border-none bg-background/60 dark:bg-default-100/50 py-4" shadow="sm">
 
                 <CardBody className={'overflow-visible py-2 items-center'}>
                     <div className='grid lg:grid-cols-4 gap-10 justify-center'>

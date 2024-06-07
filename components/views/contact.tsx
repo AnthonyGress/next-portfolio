@@ -91,12 +91,12 @@ export default function Contact() {
     };
 
     return (
-        <section className="py-5 my-16" id='contact'>
-            <div className='flex justify-center flex-col w-full gap-2 items-center mb-16'>
+        <section className="my-16" id='contact'>
+            <div className='flex justify-center flex-col w-full gap-2 items-center mb-16' data-aos="fade-right">
                 <h1 className={title()}>Contact Me</h1>
                 <h2 className={'text-default-500 text-xl'}>{'Let\'s Get In Touch'}</h2>
             </div>
-            <div className='flex justify-center align-center mb-8'>
+            <div className='flex justify-center align-center mb-8' data-aos="fade-up">
                 <Card isBlurred className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px] w-11/12" shadow="sm">
                     <CardBody className='overflow-visible py-2 items-center mb-8 mt-8'>
                         <h2 className='text-xl'>Send a Message</h2>

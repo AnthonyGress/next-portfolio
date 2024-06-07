@@ -1,11 +1,7 @@
-import { Button, Chip } from '@nextui-org/react';
-import { button as buttonStyles } from '@nextui-org/theme';
-
 import { projects } from '../../constants/projects';
 import { PhotoCollage } from '../gallery/PhotoCollages';
 
 import { title } from '@/components/primitives';
-
 
 const images = projects.map((project: any) => {
     return (
@@ -21,7 +17,7 @@ const images = projects.map((project: any) => {
 
 export default function Portfolio() {
     return (
-        <section className="lg:my-0 py-5" id='portfolio'>
+        <section className="lg:my-0 py-5" data-aos="fade-up" id='portfolio'>
             <div className='flex justify-center flex-col w-full gap-2 items-center mb-16'>
                 <h1 className={title()}>Portfolio</h1>
             </div>

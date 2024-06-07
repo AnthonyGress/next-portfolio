@@ -4,7 +4,7 @@ import { title } from '@/components/primitives';
 
 export default function Mission() {
     return (
-        <section className="pt-5 mb-16" id='mission'>
+        <section className="pt-5 mb-16" data-aos="fade-up" id='mission'>
             <div className='flex justify-center my-8'>
                 <h1 className={title()}>Mission</h1>
             </div>

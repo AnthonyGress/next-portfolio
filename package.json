@@ -22,6 +22,7 @@
 		"@nextui-org/theme": "2.2.0",
 		"@react-aria/ssr": "^3.9.2",
 		"@react-aria/visually-hidden": "^3.8.10",
+		"aos": "^2.3.4",
 		"autoprefixer": "10.4.19",
 		"axios": "^1.7.2",
 		"clsx": "^2.0.0",
@@ -41,6 +42,7 @@
 		"yet-another-react-lightbox": "^3.19.0"
 	},
 	"devDependencies": {
+		"@types/aos": "^3.0.7",
 		"@types/node": "20.5.7",
 		"@types/nodemailer": "^6.4.15",
 		"@types/react": "18.3.2",

@@ -6,9 +6,9 @@ export default function About() {
     return (
         <section className="pt-20 mb-16" id='about'>
             <div className='flex justify-center flex-col w-full gap-2 items-center'>
-                <h1 className={title()}>About Me</h1>
+                <h1 className={title()} data-aos="fade-right">About Me</h1>
             </div>
-            <div className='grid lg:grid-cols-2 gap-10 mt-16'>
+            <div className='grid lg:grid-cols-2 gap-10 mt-16' data-aos="fade-up">
                 <div className='flex flex-col justify-center' style={{ width: '100%', height: '100%', position: 'relative' }}>
                     <Image alt='aboutPhoto' height={0} sizes="100vw" src={'/images/about.jpg'} style={{ width: '100%', height: 'auto' }} width={0}/>
                 </div>
