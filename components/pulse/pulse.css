@@ -29,7 +29,7 @@
     }
 }
 
-@media(min-width:500px)
+@media(min-width:1000px)
 {
     .animate-expand {
         animation: expand 6s ease-out infinite both;
