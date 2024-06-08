@@ -64,10 +64,10 @@ export default function RootLayout({
                 <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
                     <div className="relative flex flex-col h-[calc(100dvh)]">
                         <Navbar />
-                        <Image alt='test' className='block md:hidden fixed -right-[20rem] z-0 scale-[4] md:scale-[1]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
-                        <Image alt='test' className='fixed sm:left-[45%] z-0 scale-[4] sm:scale-[1.25]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
-                        <Image alt='test' className='fixed sm:hidden bottom-0 -left-56 scale-[3]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
-                        <Image alt='test' className='fixed hidden md:block top-0 -left-64 scale-[1.25]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
+                        <Image alt='bg gradient' className='block md:hidden fixed -right-[20rem] z-0 scale-[4] md:scale-[1]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
+                        <Image alt='test' className='fixed sm:left-[45%] z-0 scale-[4] sm:scale-[1.25] top-0 md:-top-[20%]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
+                        <Image alt='bg gradient' className='fixed sm:hidden bottom-0 -left-56 scale-[3]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
+                        <Image alt='bg gradient' className='fixed hidden md:block top-0 -left-64 scale-[1.25]' height={1800} src={'/images/gradient-left-dark.svg'} width={1500}/>
                         <main className="container mx-auto pt-16 px-6 flex-grow">
                             {children}
                         </main>
