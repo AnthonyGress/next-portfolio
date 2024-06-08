@@ -38,14 +38,14 @@ export const projects = [
         description: 'Stargate is an innovative app that offers interactive 3D models of the solar system, providing a captivating way to explore the cosmos. With Stargate, users can navigate through detailed representations of celestial bodies. The app features comprehensive information about each celestial object, from their physical characteristics to their orbital dynamics and historical significance. Stargate is an educational tool designed for space enthusiasts, students, and anyone curious about the wonders of our solar system, combining stunning visuals with in-depth knowledge to create an engaging and informative experience.',
         href: '/portfolio/stargate',
         images: [
-            '/images/portfolio/stargate/stargate-2.png',
+            '/images/portfolio/stargate/stargate-2.jpg',
             '/images/portfolio/stargate/stargate-1.jpg',
             '/images/portfolio/stargate/stargate-3.jpg',
             '/images/portfolio/stargate/stargate-5.jpg',
             '/images/portfolio/stargate/stargate-4.jpg',
             '/images/portfolio/stargate/stargate-6.jpg',
         ],
-        cover: '/images/portfolio/stargate/stargate-2.png',
+        cover: '/images/portfolio/stargate/stargate-2.jpg',
         website: 'https://stargateapp.onrender.com/'
 
     },
