@@ -1,8 +1,8 @@
 export const projects = [
     {
-        title: 'Freight Maverick',
-        description: 'Freight Maverick is a cutting-edge Transportation Management System (TMS) designed for IDA Technologies to streamline the planning, execution, and optimization of the physical movement of goods. It provides visibility into day-to-day transportation operations, trade compliance information, and ensures the timely delivery of freight. Freight Maverick offers functionalities such as route planning, load optimization, carrier management, freight audit and payment, and real-time tracking. This system helps organizations reduce transportation costs, improve service levels, and gain comprehensive insights into their supply chain logistics, enhancing overall efficiency and customer satisfaction.',
-        href: '/portfolio/freight-maverick',
+        title: 'IDA Technologies',
+        description: 'IDA Technologies is a SaaS platform highlighting a cutting-edge Transportation Management System (TMS) which streamlines the planning, execution, and optimization of the physical movement of goods. It provides visibility into day-to-day transportation operations, trade compliance information, and ensures the timely delivery of freight. Freight Maverick offers functionalities such as route planning, load optimization, carrier management, freight audit and payment, and real-time tracking. This system helps organizations reduce transportation costs, improve service levels, and gain comprehensive insights into their supply chain logistics, enhancing overall efficiency and customer satisfaction.',
+        href: '/portfolio/ida-technologies',
         images: [
             '/images/portfolio/ida/ida-1.png',
             '/images/portfolio/ida/ida-dash.png',
