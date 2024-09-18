@@ -35,9 +35,7 @@ export const POST = async (request: Request) => {
             `
         };
 
-        // See https://nodemailer.com/ for more
         const transporter = nodemailer.createTransport({
-            // Follow the instructions from your mail provider.
             host: process.env.MAIL_HOST,
             port: 587,
             secure: false,

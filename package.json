@@ -1,7 +1,11 @@
 {
 	"name": "next-portfolio",
 	"version": "0.0.1",
-	"private": true,
+	"private": false,
+	"author": {
+		"name": "Anthony Gress"
+	},
+	"license": "GPL-3.0-only",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
