@@ -73,6 +73,16 @@ export const projects = [
         github: 'https://github.com/AnthonyGress/Android-Toolkit'
     },
     {
+        title: 'Youtube Downloader',
+        description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
+        href: '/portfolio/youtube-downloader',
+        images: [
+            '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+        ],
+        cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+        github: 'https://github.com/AnthonyGress/Youtube-Downloader'
+    },
+    {
         title: 'Color ID iOS App',
         description: 'Color ID is a versatile app designed for anyone who is color blind or needs precise color identification. Users can take photos or select images from their camera roll to identify specific colors within the image. The app provides detailed color information, including RGB, CMYK, and HSL values, making it an invaluable tool for designers, artists, and anyone working with colors. Additionally, Color ID allows users to create and save custom color palettes, ensuring that favorite or frequently used colors are always at hand.',
         href: '/portfolio/color-id',
@@ -88,13 +98,15 @@ export const projects = [
         website: 'https://apple.co/4bFvK5G'
     },
     {
-        title: 'Youtube Downloader',
-        description: 'YouTube Downloader is a versatile app designed to download audio and video from YouTube videos effortlessly. With this app, users can save their favorite content directly to their devices for offline viewing and listening. A standout feature is its ability to process an uploaded CSV file, enabling batch downloads of multiple songs or videos from a pre-defined list. YouTube Downloader is perfect for those who want to create personalized media libraries quickly and efficiently, combining ease of use with powerful downloading capabilities.',
-        href: '/portfolio/youtube-downloader',
+        title: 'Full Stack E-Commerce',
+        description: 'A full stack application featuring a Dockerized Node/Typescript REST API connected to a PostgreSQL Database. The frontend is built using Typescript and the Next.js framework for React.',
+        href: '/portfolio/fullstack-ecommerce',
         images: [
-            '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
+            '/images/portfolio/fullstack-ecommerce/home.png',
+            '/images/portfolio/fullstack-ecommerce/shop.png',
+            '/images/portfolio/fullstack-ecommerce/checkout.png'
         ],
-        cover: '/images/portfolio/youtube-downloader/youtube-downloader-1.jpg',
-        github: 'https://github.com/AnthonyGress/Youtube-Downloader'
+        cover: '/images/portfolio/fullstack-ecommerce/home.png',
+        github: 'https://github.com/AnthonyGress/E-Commerce-Fullstack'
     }
 ];

@@ -1,3 +1,4 @@
+import { Footer } from '../../components/footer';
 import { Navbar } from '../../components/navbar';
 
 export default function PortfolioLayout({
@@ -13,6 +14,7 @@ export default function PortfolioLayout({
                 <div className='hidden md:block fixed bg-[url("/images/gradient-left-dark.svg")] bottom-0 -left-72' style={{ width: '1200px', height: '800px' }} />
             </section>
             <section className='flex flex-col items-center justify-center gap-4 w-full mb-16 md:mb-'>{children}</section>
+            <Footer />
         </>
     );
 }
