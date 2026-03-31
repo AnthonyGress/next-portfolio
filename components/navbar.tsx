@@ -8,18 +8,16 @@ import {
     NavbarItem,
     NavbarMenuItem,
 } from '@nextui-org/navbar';
-import { Link } from '@nextui-org/link';
 import { link as linkStyles } from '@nextui-org/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
-import { useReducer } from 'react';
+import { useState } from 'react';
 
 import { siteConfig } from '@/config/site';
-import { ThemeSwitch } from '@/components/theme-switch';
 import { Logo } from '@/components/icons';
 
 export const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useReducer((current) => !current, false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <NextUINavbar
@@ -67,17 +65,17 @@ export const Navbar = () => {
                 <NavbarMenuToggle />
             </NavbarContent>
 
-            <NavbarMenu>
+            {isMenuOpen && <NavbarMenu>
                 <div className="flex flex-col gap-8 items-center justify-center h-svh -mt-10">
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <NextLink className='text-2xl' color="foreground" href={item.href} onClick={() => setIsMenuOpen()}>
+                            <NextLink className='text-2xl' color="foreground" href={item.href} onClick={() => setIsMenuOpen(false)}>
                                 {item.label}
                             </NextLink>
                         </NavbarMenuItem>
                     ))}
                 </div>
-            </NavbarMenu>
+            </NavbarMenu>}
         </NextUINavbar>
     );
 };

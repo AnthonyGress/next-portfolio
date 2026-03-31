@@ -1,5 +1,4 @@
 import { button as buttonStyles } from '@nextui-org/theme';
-import NextLink from 'next/link';
 import { Button } from '@nextui-org/button';
 import { IoLogoGithub } from 'react-icons/io';
 import { IoIosGlobe } from 'react-icons/io';
@@ -37,36 +36,36 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <h1 className={title()}>{project.title}</h1>
                     <h2 className={subtitle()}>{project.description}</h2>
                 </div>
-                <div className='mb-8 flex justify-center gap-4'>
+                <div className='relative z-50 mb-8 flex justify-center gap-4'>
                     {project.github && <Button
-                        as={NextLink}
+                        as='a'
                         className={`${buttonStyles({
                             color: 'primary',
                             radius: 'full',
                             variant: 'shadow',
                             size: 'lg'
-                        })} text-white`}
+                        })} text-white pointer-events-auto touch-manipulation`}
                         href={project.github}
                         rel='noopener noreferrer'
-                        startContent={<IoLogoGithub size={40}/>}
                         target='_blank'
                     >
-                          GitHub
+                        <IoLogoGithub size={28}/>
+                        <span>GitHub</span>
                     </Button>}
                     {project.website && <Button
-                        as={NextLink}
+                        as='a'
                         className={`${buttonStyles({
                             color: 'primary',
                             radius: 'full',
                             variant: 'shadow',
                             size: 'lg'
-                        })} text-white`}
+                        })} text-white pointer-events-auto touch-manipulation`}
                         href={project.website}
                         rel='noopener noreferrer'
-                        startContent={<IoIosGlobe size={40}/>}
                         target='_blank'
                     >
-                          Website
+                        <IoIosGlobe size={28}/>
+                        <span>Website</span>
                     </Button>}
                 </div>
                 <div className="flex justify-center">
