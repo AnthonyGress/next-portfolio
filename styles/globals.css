@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html {
     scroll-behavior: smooth;
+    background-color: transparent;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: transparent;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100lvh;
 }
 
 section {

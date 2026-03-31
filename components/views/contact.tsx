@@ -161,7 +161,7 @@ export default function Contact() {
                                 )}
                             />
                         </form>
-                        <div className='w-full flex justify-center'><Button className='text-white mt-4 w-9/12 sm:w-1/2 mb-8' color='primary' isDisabled={disableBtn()} size='lg' onClick={sendEmail}>Send</Button></div>
+                        <div className='w-full flex justify-center'><Button className='text-white mt-4 w-9/12 sm:w-1/2 mb-8' color='primary' isDisabled={disableBtn()} size='lg' onPress={sendEmail}>Send</Button></div>
                     </div>
                 </Card>
             </div>

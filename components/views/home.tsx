@@ -25,18 +25,18 @@ export default function Home() {
 
 
             <div className='mb-2'>
-                <NextLink href={'#about'}>
-                        <Button
-                            className={`${buttonStyles({
-                                color: 'primary',
-                                radius: 'full',
-                                variant: 'solid',
-                                size: 'lg'
-                            })} text-white`}
-                        >
-                                  Learn More
-                        </Button>
-                </NextLink>
+                <Button
+                    as={NextLink}
+                    className={`${buttonStyles({
+                        color: 'primary',
+                        radius: 'full',
+                        variant: 'solid',
+                        size: 'lg'
+                    })} text-white`}
+                    href={'#about'}
+                >
+                    Learn More
+                </Button>
             </div>
 
         </section>

@@ -37,33 +37,37 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <h1 className={title()}>{project.title}</h1>
                     <h2 className={subtitle()}>{project.description}</h2>
                 </div>
-                <div className='mb-8 flex justify-center'>
-                    {project.github && <NextLink href={project.github}>
-                        <Button
-                            className={`${buttonStyles({
-                                color: 'primary',
-                                radius: 'full',
-                                variant: 'shadow',
-                                size: 'lg'
-                            })} text-white`}
-                            startContent={<IoLogoGithub size={40}/>}
-                        >
-                              GitHub
-                        </Button>
-                    </NextLink>}
-                    {project.website && <NextLink href={project.website}>
-                        <Button
-                            className={`${buttonStyles({
-                                color: 'primary',
-                                radius: 'full',
-                                variant: 'shadow',
-                                size: 'lg'
-                            })} text-white`}
-                            startContent={<IoIosGlobe size={40}/>}
-                        >
-                              Website
-                        </Button>
-                    </NextLink>}
+                <div className='mb-8 flex justify-center gap-4'>
+                    {project.github && <Button
+                        as={NextLink}
+                        className={`${buttonStyles({
+                            color: 'primary',
+                            radius: 'full',
+                            variant: 'shadow',
+                            size: 'lg'
+                        })} text-white`}
+                        href={project.github}
+                        rel='noopener noreferrer'
+                        startContent={<IoLogoGithub size={40}/>}
+                        target='_blank'
+                    >
+                          GitHub
+                    </Button>}
+                    {project.website && <Button
+                        as={NextLink}
+                        className={`${buttonStyles({
+                            color: 'primary',
+                            radius: 'full',
+                            variant: 'shadow',
+                            size: 'lg'
+                        })} text-white`}
+                        href={project.website}
+                        rel='noopener noreferrer'
+                        startContent={<IoIosGlobe size={40}/>}
+                        target='_blank'
+                    >
+                          Website
+                    </Button>}
                 </div>
                 <div className="flex justify-center">
                     {images && images.length > 1

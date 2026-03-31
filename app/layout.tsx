@@ -41,9 +41,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+    viewportFit: 'cover',
     themeColor: [
-        { media: '(prefers-color-scheme: light)', color: 'white' },
-        { media: '(prefers-color-scheme: dark)', color: 'black' },
+        { media: '(display-mode: standalone)', color: '#000000' },
     ],
 };
 
@@ -57,12 +57,20 @@ export default function RootLayout({
             <head />
             <body
                 className={clsx(
-                    'min-h-screen bg-background font-sans antialiased',
+                    'min-h-screen font-sans antialiased',
                     fontSans.variable,
                 )}
             >
                 <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-                    <div className="relative flex flex-col h-[calc(100dvh)]">
+                    <div
+                        aria-hidden
+                        className="pointer-events-none fixed inset-0 -z-10"
+                        style={{
+                            background:
+                                'radial-gradient(120% 80% at 80% 10%, rgba(80, 16, 140, 0.45) 0%, rgba(12, 22, 94, 0.35) 35%, rgba(0, 22, 84, 0.2) 55%, rgba(0, 0, 0, 0.9) 100%)',
+                        }}
+                    />
+                    <div className="relative flex flex-col min-h-[100lvh]">
                         <Navbar />
                         <Image alt='bg gradient' className='block md:hidden fixed -right-[20rem] z-0 scale-[4] md:scale-[1]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
                         <Image alt='test' className='fixed sm:left-[45%] z-0 scale-[4] sm:scale-[1.25] top-0 md:-top-[20%]' height={1800} src={'/images/gradient-right-dark.svg'} width={1500}/>
